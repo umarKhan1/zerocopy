@@ -37,9 +37,10 @@ class BenchmarkScreen extends StatefulWidget {
 class _BenchmarkScreenState extends State<BenchmarkScreen> {
   static const int payloadSize = 10 * 1024 * 1024; // 10MB
   static const int iterations = 100;
-  
+
   bool _isRunning = false;
-  String _results = 'Press "Run Benchmark" to start.\n\nSimulating $iterations iterations of 10MB data transfer.';
+  String _results =
+      'Press "Run Benchmark" to start.\n\nSimulating $iterations iterations of 10MB data transfer.';
 
   final BasicMessageChannel<dynamic> _channel = const BasicMessageChannel(
     'benchmark_channel',
@@ -49,7 +50,8 @@ class _BenchmarkScreenState extends State<BenchmarkScreen> {
   Future<void> _runBenchmark() async {
     setState(() {
       _isRunning = true;
-      _results = 'Running benchmarks...\nPlease wait, this may take a few seconds and cause the UI to freeze temporarily during heavy load.';
+      _results =
+          'Running benchmarks...\nPlease wait, this may take a few seconds and cause the UI to freeze temporarily during heavy load.';
     });
 
     // Give UI time to update
@@ -77,16 +79,16 @@ class _BenchmarkScreenState extends State<BenchmarkScreen> {
     final isoStopwatch = Stopwatch()..start();
     for (int i = 0; i < iterations; i++) {
       final iterStopwatch = Stopwatch()..start();
-      
+
       final port = ReceivePort();
       await Isolate.spawn((SendPort sp) {
         // Mock some processing and return payload
         sp.send(Uint8List(payloadSize));
       }, port.sendPort);
-      
+
       await port.first;
       port.close();
-      
+
       if (iterStopwatch.elapsedMilliseconds > 16) isolateJank++;
     }
     isoStopwatch.stop();
@@ -95,19 +97,19 @@ class _BenchmarkScreenState extends State<BenchmarkScreen> {
     int zeroCopyJank = 0;
     final zcStopwatch = Stopwatch()..start();
     final zcBuffer = ZeroCopyBuffer(sizeInBytes: payloadSize);
-    
+
     for (int i = 0; i < iterations; i++) {
       final iterStopwatch = Stopwatch()..start();
-      
+
       zcBuffer.lock();
       // Simulate writing 10MB sequentially directly to pointer
       final view = zcBuffer.view;
       // In a real scenario, this would be a memcpy or SIMD copy on C++ side.
-      // Doing it per byte in Dart loop is slow, so we simulate a block copy 
+      // Doing it per byte in Dart loop is slow, so we simulate a block copy
       // by mapping directly to view.
       view.setAll(0, dummyData);
       zcBuffer.unlock();
-      
+
       if (iterStopwatch.elapsedMilliseconds > 16) zeroCopyJank++;
     }
     zcStopwatch.stop();
@@ -115,7 +117,8 @@ class _BenchmarkScreenState extends State<BenchmarkScreen> {
 
     setState(() {
       _isRunning = false;
-      _results = '''
+      _results =
+          '''
       🏆 Benchmark Results (10MB x $iterations)
       
       🔴 MethodChannel (StandardMessageCodec):

@@ -20,15 +20,15 @@ class ZeroCopyBuffer implements Finalizable {
     if (sizeInBytes <= 0) {
       throw ArgumentError('Buffer size must be greater than 0.');
     }
-    
+
     // Allocate 64-byte aligned SIMD memory in C++
     final rawPtr = ffi_bridge.get_buffer_address(sizeInBytes);
     if (rawPtr.address == 0) {
       throw OutOfMemoryError();
     }
-    
+
     _bufferPtr = rawPtr.cast<Uint8>();
-    
+
     // Create a direct memory view into the C++ buffer.
     // STRICT REQUIREMENT: No data is cloned here. This is a zero-copy pointer view.
     _view = _bufferPtr!.asTypedList(sizeInBytes);
