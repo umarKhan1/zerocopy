@@ -18,16 +18,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Dart SDK
-        uses: dart-lang/setup-dart@v1
-
-      # Note: C/C++ compilers are pre-installed on GitHub-hosted runners
-      # Ubuntu: gcc/clang
-      # macOS: Xcode (clang)
-      # Windows: MSVC
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
 
       - name: Install dependencies
-        run: dart pub get
+        run: |
+          dart pub get
+          cd example && flutter pub get
 
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
