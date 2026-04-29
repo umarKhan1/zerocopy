@@ -1,0 +1,17 @@
+name: zerocopy
+description: A high-performance Flutter package that eliminates the "Copy Tax" between Dart and Native layers using shared memory addresses and FFI.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  code_assets: ^1.0.0
+  ffi: ^2.1.2
+  hooks: ^1.0.3
+  native_toolchain_c: ^0.18.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0

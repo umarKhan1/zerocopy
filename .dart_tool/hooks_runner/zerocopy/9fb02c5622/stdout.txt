@@ -1,0 +1,19 @@
+Running `TMPDIR=/var/folders/l5/7z5_zbvx4xz3ycspwngcy8xc0000gn/T/ PATH=/Users/muhammadomar/.antigravity/antigravity/bin:/opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home/bin:/opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home/bin:/opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/Users/muhammadomar/.fvm_flutter/bin:/usr/local/opt/ruby/bin:/Users/muhammadomar/Downloads/flutter/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/muhammadomar/.rbenv/shims:/Users/muhammadomar/.rbenv/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/Users/muhammadomar/.pub-cache/bin:/Users/muhammadomar/.rvm/bin HOME=/Users/muhammadomar /Users/muhammadomar/Downloads/flutter/bin/cache/dart-sdk/bin/dart --packages=/Users/muhammadomar/Documents/projects/zerocopy/.dart_tool/package_config.json /Users/muhammadomar/Documents/projects/zerocopy/.dart_tool/hooks_runner/zerocopy/9fb02c5622/hook.dill --config=/Users/muhammadomar/Documents/projects/zerocopy/.dart_tool/hooks_runner/zerocopy/9fb02c5622/input.json`.
+Running `which clang`.
+
+Running `/usr/bin/clang --version`.
+
+Running `/usr/bin/clang --version`.
+
+Running `which xcrun`.
+
+Running `/usr/bin/xcrun --version`.
+
+Running `/usr/bin/xcrun --sdk macosx --show-sdk-path`.
+
+Running `/usr/bin/xcrun --sdk iphoneos --show-sdk-path`.
+
+Running `/usr/bin/xcrun --sdk iphonesimulator --show-sdk-path`.
+
+Running `/usr/bin/clang --target=arm64-apple-darwin -mmacos-version-min=12 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/ -fPIC -O3 -Wl,-encryptable -O3 -ffast-math -fPIC -std=c++17 -DRELEASE -DNDEBUG /Users/muhammadomar/Documents/projects/zerocopy/src/zerocopy.cpp --shared -o /Users/muhammadomar/Documents/projects/zerocopy/.dart_tool/hooks_runner/shared/zerocopy/build/9fb02c5622/libzerocopy.dylib -L/Users/muhammadomar/Documents/projects/zerocopy/.dart_tool/hooks_runner/shared/zerocopy/build/9fb02c5622/`.
+

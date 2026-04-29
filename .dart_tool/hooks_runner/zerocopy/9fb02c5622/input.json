@@ -1,0 +1,24 @@
+{
+  "assets": {},
+  "config": {
+    "build_asset_types": [
+      "code_assets/code"
+    ],
+    "extensions": {
+      "code_assets": {
+        "link_mode_preference": "dynamic",
+        "macos": {
+          "target_version": 12
+        },
+        "target_architecture": "arm64",
+        "target_os": "macos"
+      }
+    },
+    "linking_enabled": false
+  },
+  "out_dir_shared": "/Users/muhammadomar/Documents/projects/zerocopy/.dart_tool/hooks_runner/shared/zerocopy/build/",
+  "out_file": "/Users/muhammadomar/Documents/projects/zerocopy/.dart_tool/hooks_runner/zerocopy/9fb02c5622/output.json",
+  "package_name": "zerocopy",
+  "package_root": "/Users/muhammadomar/Documents/projects/zerocopy/",
+  "user_defines": {}
+}
