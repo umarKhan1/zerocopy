@@ -1,13 +1,18 @@
 name: zerocopy
-description: A high-performance Flutter package that eliminates the "Copy Tax" between Dart and Native layers using shared memory addresses and FFI.
+description: >-
+  Eliminates the Dart↔Native "Copy Tax" using SIMD-aligned C++ shared memory,
+  Pointer.asTypedList() bridging, and an atomic spinlock. Zero serialization. Zero GC impact.
 version: 0.1.0
+homepage: https://momarkhan.com/
 repository: https://github.com/umarKhan1/zerocopy
 issue_tracker: https://github.com/umarKhan1/zerocopy/issues
+documentation: https://pub.dev/documentation/zerocopy/latest/
 topics:
   - ffi
   - performance
   - memory
   - native
+  - dart-ffi
 
 environment:
   sdk: ^3.4.0
