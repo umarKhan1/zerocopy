@@ -78,7 +78,7 @@ class ZeroCopyBuffer implements Finalizable {
     }
 
     // Allocate 64-byte aligned SIMD memory in C++
-    final rawPtr = ffi_bridge.get_buffer_address(sizeInBytes);
+    final rawPtr = ffi_bridge.getBufferAddress(sizeInBytes);
     if (rawPtr.address == 0) {
       throw OutOfMemoryError();
     }
@@ -160,7 +160,7 @@ class ZeroCopyBuffer implements Finalizable {
   /// > ⚠️ **Warning:** Do not hold this lock for more than a few microseconds.
   /// > For long-running operations, use Dart [Isolate] message passing instead.
   void lock() {
-    ffi_bridge.lock_buffer();
+    ffi_bridge.lockBuffer();
   }
 
   /// Releases the C++ atomic spinlock.
@@ -168,7 +168,7 @@ class ZeroCopyBuffer implements Finalizable {
   /// Must be called exactly once after each successful [lock] call.
   /// Prefer using a `try/finally` block to guarantee release even on errors.
   void unlock() {
-    ffi_bridge.unlock_buffer();
+    ffi_bridge.unlockBuffer();
   }
 
   /// Frees the underlying C++ memory immediately and marks this buffer as
@@ -188,7 +188,7 @@ class ZeroCopyBuffer implements Finalizable {
     if (!_isDisposed && _bufferPtr != null) {
       _isDisposed = true;
       _finalizer.detach(this); // Prevent double-free
-      ffi_bridge.free_buffer_address(_bufferPtr!.cast<Void>());
+      ffi_bridge.freeBufferAddress(_bufferPtr!.cast<Void>());
       _bufferPtr = null;
       _view = null;
     }
