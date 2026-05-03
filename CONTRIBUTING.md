@@ -4,7 +4,7 @@ Thank you for your interest in contributing to `zerocopy`! This guide will help 
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [Getting Started](#getting-started)
@@ -63,20 +63,20 @@ dart test           # Must pass all tests (compiles native assets too)
 ```
 zerocopy/
 ├── hook/
-│   └── build.dart            ← Dart 3 Native Assets build hook
+│   └── build.dart            <- Dart 3 Native Assets build hook
 ├── lib/
-│   ├── zerocopy.dart         ← Public library barrel export
+│   ├── zerocopy.dart         <- Public library barrel export
 │   └── src/
 │       ├── domain/
-│       │   └── zerocopy_buffer.dart    ← Public API (ZeroCopyBuffer)
+│       │   └── zerocopy_buffer.dart    <- Public API (ZeroCopyBuffer)
 │       └── infrastructure/
-│           └── zerocopy_ffi_bridge.dart ← @Native FFI bindings
+│           └── zerocopy_ffi_bridge.dart <- @Native FFI bindings
 ├── src/
-│   ├── zerocopy.h            ← C++ public header
-│   └── zerocopy.cpp          ← C++ native implementation
+│   ├── zerocopy.h            <- C++ public header
+│   └── zerocopy.cpp          <- C++ native implementation
 ├── test/
-│   └── zerocopy_test.dart    ← Dart unit tests
-└── example/                  ← Full Flutter benchmark app
+│   └── zerocopy_test.dart    <- Dart unit tests
+└── example/                  <- Full Flutter benchmark app
 ```
 
 ---
@@ -124,6 +124,6 @@ For **major** features or breaking changes, please open a GitHub Issue first to 
 
 ## Support
 
-- 🌐 Author website: [momarkhan.com](https://momarkhan.com/)
-- 💼 LinkedIn: [Muhammad Omar](https://www.linkedin.com/in/muhammad-omar-0335/)
-- 🐛 Bug reports: [github.com/umarKhan1/zerocopy/issues](https://github.com/umarKhan1/zerocopy/issues)
+- Author website: [momarkhan.com](https://momarkhan.com/)
+- LinkedIn: [Muhammad Omar](https://www.linkedin.com/in/muhammad-omar-0335/)
+- Bug reports: [github.com/umarKhan1/zerocopy/issues](https://github.com/umarKhan1/zerocopy/issues)

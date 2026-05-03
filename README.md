@@ -1,9 +1,4 @@
 # zerocopy
-
-<p align="center">
-  <a href="https://pub.dev/packages/zerocopy"><img src="https://img.shields.io/pub/v/zerocopy.svg" alt="pub version"></a>
-  <a href="https://pub.dev/packages/zerocopy"><img src="https://img.shields.io/pub/likes/zerocopy" alt="pub likes"></a>
-  <a href="https://pub.dev/packages/zerocopy/score"><img src="https://img.shields.io/pub/points/zerocopy" alt="pub points"></a>
   <a href="https://github.com/umarKhan1/zerocopy/actions"><img src="https://github.com/umarKhan1/zerocopy/actions/workflows/verify.yml/badge.svg" alt="CI Status"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </p>
@@ -14,7 +9,7 @@
 
 ---
 
-## 🚀 The "Copy Tax" Problem
+##  The "Copy Tax" Problem
 
 Every time you send large data payloads (camera frames, audio buffers, physics simulations, ML tensors) between Dart and Native code via `MethodChannel` or even standard `dart:ffi` structs, the runtime **serializes and clones** the data into a new allocation on the Dart managed heap.
 
@@ -60,7 +55,7 @@ The four pillars of `zerocopy`:
 
 ---
 
-## 📊 Benchmark: ZeroCopy vs The World (10 MB Payload)
+##  Benchmark: ZeroCopy vs The World (10 MB Payload)
 
 Head-to-head test transferring a **10 MB** byte array **100 times** in Flutter profile mode:
 
@@ -74,7 +69,7 @@ Head-to-head test transferring a **10 MB** byte array **100 times** in Flutter p
 
 ---
 
-## 🖥️ Platform Support
+##  Platform Support
 
 | Platform | Status | Native Toolchain |
 | :--- | :--- | :--- |
@@ -88,7 +83,7 @@ All platforms are compiled automatically via the **Dart 3 Native Assets** (`buil
 
 ---
 
-## 📦 Installation
+##   Installation
 
 Add `zerocopy` to your `pubspec.yaml`:
 
@@ -107,7 +102,7 @@ flutter pub get
 
 ---
 
-## 🔧 Usage
+##  Usage
 
 ### Basic Read/Write
 
@@ -169,7 +164,7 @@ try {
 buffer.dispose();
 ```
 
-> ⚠️ **Important:** `lock()` is a **spinlock** — it actively burns CPU cycles until the lock is free. Use it only for very short critical sections (microseconds). For long-running operations, use Dart `Isolate` message passing instead.
+>  **Important:** `lock()` is a **spinlock** — it actively burns CPU cycles until the lock is free. Use it only for very short critical sections (microseconds). For long-running operations, use Dart `Isolate` message passing instead.
 
 ### Real-World: Passing a Camera Frame to Native
 
@@ -189,7 +184,7 @@ Future<void> processFrame(Uint8List rawFrameBytes) async {
 
 ---
 
-## 📖 API Reference
+##  API Reference
 
 ### `ZeroCopyBuffer`
 
@@ -224,7 +219,7 @@ ZeroCopyBuffer({required int sizeInBytes})
 
 ---
 
-## 🏗️ Architecture Deep Dive
+##  Architecture Deep Dive
 
 ### Native Assets Pipeline (Dart 3)
 
@@ -273,7 +268,7 @@ The `Uint8List` returned by `view` holds a **raw pointer** to the C++ allocation
 
 ---
 
-## 🧪 Running the Example & Benchmarks
+##  Running the Example & Benchmarks
 
 The `example/` directory contains a full Flutter application that benchmarks `ZeroCopy` against `MethodChannel` and `Isolate` with a 10 MB payload.
 
@@ -284,7 +279,7 @@ flutter run --profile   # Run in profile mode for accurate benchmark numbers
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are warmly welcome! Please read the guidelines below before opening a PR.
 
@@ -301,22 +296,22 @@ For major changes, please open an issue first to discuss your proposal.
 
 ---
 
-## 🐛 Issues & Support
+##  Issues & Support
 
 Found a bug or have a feature request?
 
-- 🐛 **Open an issue**: [github.com/umarKhan1/zerocopy/issues](https://github.com/umarKhan1/zerocopy/issues)
-- 🌐 **Author's website**: [momarkhan.com](https://momarkhan.com/)
-- 💼 **LinkedIn**: [Muhammad Omar](https://www.linkedin.com/in/muhammad-omar-0335/)
+- **Open an issue**: [github.com/umarKhan1/zerocopy/issues](https://github.com/umarKhan1/zerocopy/issues)
+- **Author's website**: [momarkhan.com](https://momarkhan.com/)
+- **LinkedIn**: [Muhammad Omar](https://www.linkedin.com/in/muhammad-omar-0335/)
 
 ---
 
-## 📄 License
+##  License
 
 This package is released under the [MIT License](LICENSE).
 
 ```
-MIT License — Copyright (c) 2024 Muhammad Omar
+MIT License — Copyright (c) 2026 Muhammad Omar
 ```
 
 ---
