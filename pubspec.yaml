@@ -1,13 +1,11 @@
 name: zerocopy
 description: >-
-  Eliminates the Dart↔Native "Copy Tax" using SIMD-aligned C++ shared memory,
-  Pointer.asTypedList() bridging, and an atomic spinlock. Zero serialization.
-  Zero GC impact.
-version: 0.1.0
+  Eliminates the Dart-Native "Copy Tax" using SIMD-aligned C++ shared memory,
+  Pointer.asTypedList() bridging, and an atomic spinlock. Zero serialization. Zero GC impact.
+version: 0.1.1
 homepage: https://momarkhan.com/
 repository: https://github.com/umarKhan1/zerocopy
 issue_tracker: https://github.com/umarKhan1/zerocopy/issues
-documentation: https://pub.dev/documentation/zerocopy/latest/
 topics:
   - ffi
   - performance
